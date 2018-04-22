@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="adamant"
+           fetch="git://github.com/AdamantOS"
+           revision="refs/heads/adamant-8.1"
+           sync-j="8" />
+
+  <remote  name="github"
+           fetch="git://github.com/"
+           sync-c="true"
+           sync-j="8" />
+
+  <remote  name="private"
+           fetch="ssh://git@github.com" />
+
+  <!-- FIRST: Remove unused/forked AOSP Projects -->
+  <include name="remove.xml" />
+
+  <!-- AdamantOS Projects -->
+  <project path="vendor/adamant" name="android_vendor_adamant" remote="adamant" />
+
+</manifest>
